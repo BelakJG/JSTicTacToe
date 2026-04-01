@@ -1,0 +1,19 @@
+body {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ttt-board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    width: 600px;
+    height: 600px;
+}
+
+#ttt-board > * {
+    background-color: white;
+    border: 1px solid black;
+    font-size: 100px;
+}
