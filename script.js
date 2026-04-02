@@ -79,7 +79,7 @@ function Player(symbol, order) {
 
 const gameController = (() => {
   const players = [new Player("X", "one"), new Player("O", "two")];
-  let turn = 0;
+  let turn = 1;
   const gameInfo = document.querySelector("#game-info");
 
   const updateInfo = () => {
@@ -127,6 +127,7 @@ const gameController = (() => {
   };
 
   const startGame = () => {
+    turn = (turn + 1) % 2;
     document.querySelector("#ttt-board").style.pointerEvents = "all";
     gameBoard.resetBoard();
     updateInfo();
